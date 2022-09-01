@@ -1,0 +1,175 @@
+/*-------------------------------------- root*/
+:root{
+   --white: #ffffffc2;
+   --color-wrapper: #1b1f24;
+   --color-menu:#24292f;
+   --color-ginger: #e1a171de;
+   --shadow: inset 2px 2px 2px #201b1bb3, inset -2px -2px 2px #68686840;
+   --shadow-hover: 0px 0px 2px 2px #e07527a8;
+   --transition: box-shadow 0.2s linear;
+
+   --padding: 1rem;
+   --item-width: 10rem;
+   --item-height: 3rem;
+   --border-radius: 0.6rem;
+
+   --header-footer: 5rem;
+}
+/*-------------------------------------- reset*/
+*,*::before,*::after{padding: 0;margin: 0;border: 0;box-sizing: border-box; outline: 0;}
+a{text-decoration: none; color: inherit;}
+ol,ul,li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
+html,body{height: 100%;line-height: 1;font-size: 16px;color: var(--white); overflow: hidden;}
+
+/*-------------------------------------- container*/
+[class*='__container']{
+   max-width: 1630px;
+   padding: 0 var(--padding);
+   margin: 0 auto;
+}
+/*-------------------------------------- wrapper*/
+.wrapper{
+   display: flex;
+   flex-direction: column;
+   background-color: var(--color-wrapper);
+}
+/*-------------------------------------- header*/
+.header{
+   height: var(--header-footer);
+}
+.header__container{
+   height: 100%;
+}
+.header__inner{
+   height: 100%;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   align-items: center;
+   grid-gap: var(--padding);
+}
+.logo{
+   height: var(--item-height);
+   width: var(--item-width);
+   background-color: var(--color-menu);
+   border-radius: var(--border-radius);
+}
+.footer .logo{
+   width: 15rem;
+}
+.logo__link{
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font: 400 2rem/1 Bangers;
+}
+.menu{
+   height: 100%;
+}
+.menu__list{
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: var(--padding);
+}
+.menu__item{
+   width: var(--item-width);
+   height: var(--item-height);
+   background-color: var(--color-menu);
+   border-radius: var(--border-radius);
+   transition: var(--transition);
+}
+.menu__item-hover{
+   box-shadow: none;
+   box-shadow: var(--shadow-hover);
+   color: var(--color-ginger);
+}
+.menu__link{
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font: 400 1.5rem/1 Neucha;
+}
+/*-------------------------------------- main*/
+.main{
+   flex-grow: 1;
+}
+.main__container{
+   height: 100%;
+}
+.main__inner{
+   height: 100%;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-column-gap: var(--padding);
+}
+/*-------------------------------------- game*/
+.canvas{
+   display: block;
+   border-radius: var(--border-radius);
+}
+/*-------------------------------------- information*/
+.information{
+   background-image: url(../kenney_sokobanpack/b2.png); 
+   border-radius: var(--border-radius);
+   display: grid;
+   grid-template-columns: 1fr;
+}
+.information-background{
+   margin: 5%;
+   background-color: var(--color-wrapper);
+   border-radius: var(--border-radius);
+   position: relative;
+}
+.settings{
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: var(--padding);
+}
+.settings>*{
+   text-align: center;
+}
+.settings__difficulty, .settings__language{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   grid-gap: var(--padding);
+}
+.settings>*>*{
+   height: var(--item-height);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.settings__title{
+   font: 400 2rem/1 Neucha;
+   grid-column: 1/-1;
+   background-color: var(--color-menu);
+   border-radius: var(--border-radius);
+}
+.settings__item{
+   font: 400 1.5rem/1 Neucha;
+   background-color: var(--color-menu);
+   border-radius: var(--border-radius);
+   cursor: pointer;
+   transition: var(--transition);
+}
+/*-------------------------------------- footer*/
+.footer{
+   height: var(--header-footer);
+}
+.footer__container{
+   height: 100%;
+}
+.footer__inner{
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
